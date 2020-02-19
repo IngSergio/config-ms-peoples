@@ -1,2 +1,54 @@
+# Configuracion mensajes RestController
+phone:
+  deleteerr: Telefono NO eliminado
+  deleteok: Telefono eliminado correctamente
+  empty: ''
+  header: Encabezado
+  headerdelete: Eliminar telefono
+  headerinsert: Insertar telefono
+  headerupdate: Actualizar telefono
+  inserterr: Telefono NO insertado
+  insertok: Telefono insertado correctamente
+  listerr: Lista de telefonos se encuentra vacia
+  listheader: Lista de telefonos
+  listiderr: No se encuentra el telefono
+  listidheader: Telefono
+  listidok: Telefono cargado satisfactoriamente
+  listok: Lista cargada satisfactoriamente
+  statuserr: 400
+  statusok: 200
+  updateerr: Telefono NO actualizado
+  updateok: Telefono actualizado correctamente
+
+# Configuraciones datasource
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/db_phones
+  application:
+    name: crud-phones
+
+# Servidor puerto
 server:
   port: 8082
+      
+# Configuraciones Swagger
+swagger:
+  basepackage: mx.com.asteci.rest
+  description: Demo Phones
+  title: App-Phones
+  version: 1.0
+  
+# Logger con opción root
+logging:
+  file: C:/log4jBoot/log4jYml.log
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+# Configuracion eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
