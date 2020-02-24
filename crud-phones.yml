@@ -31,12 +31,7 @@ spring:
 # Servidor puerto
 server:
   port: ${PORT:0}
-  
-#Configurando instancia en eureka
-eureka:
-  instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-      
+        
 # Configuraciones Swagger
 swagger:
   basepackage: mx.com.asteci.rest
@@ -57,3 +52,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+  #Configurando instancia en eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
