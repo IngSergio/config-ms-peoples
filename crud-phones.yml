@@ -29,8 +29,13 @@ spring:
     name: crud-phones
 
 # Servidor puerto
-#server:
- # port: 8082
+server:
+  port: ${PORT:0}
+  
+#Configurando instancia en eureka
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
       
 # Configuraciones Swagger
 swagger:
